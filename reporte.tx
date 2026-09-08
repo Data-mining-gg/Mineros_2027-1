@@ -1,0 +1,97 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{utf8x}
+\usepackage[spanish]{babel}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{color}
+
+\lstset{
+  language=SQL,
+  basicstyle=\ttfamily\small,
+  keywordstyle=\bfseries\color{blue},
+  stringstyle=\color{red},
+  commentstyle=\color{green},
+  frame=single,
+  breaklines=true,
+  showstringspaces=false
+}
+
+\title{\textbf{Reporte de Proyecto: BigQuery}}
+\author{\textbf{Integrantes:}\\ Saúl Vega Navas \\ Herrera Cuamatla Jennifer Jade \\ Cimmino Yáñez Nicholas Joseph \\ Kristian Leonel Benítez Pérez}
+
+\begin{document}
+
+\maketitle
+
+\newpage
+
+% --------------------------------------------------
+% 1. EXPLICACIÓN
+% --------------------------------------------------
+\section{Explicación del Proyecto}
+
+% !!! Escriban aquí la explicación general del proyecto.
+[Escribir aquí la explicación general del proyecto y la descripción del problema]
+
+
+% --------------------------------------------------
+% 2. DIAGRAMA DEL ESQUEMA
+% --------------------------------------------------
+\section{Diagrama del Esquema}
+
+% !!!! Especifiquen si es Estrella o Copo de Nieve y expliquen brevemente :).
+\subsection{Tipo de Esquema}
+[Indicar si el esquema es Estrella o Copo de Nieve y agregar una breve explicación]
+
+\subsection{Imagen del Diagrama}
+% !!! Guardar la imagen del diagrama en la misma carpeta con el nombre "diagrama.png"
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{diagrama.png}
+    \caption{Diagrama del Esquema}
+\end{figure}
+
+
+% --------------------------------------------------
+% 3. CÓDIGO SQL EN BIGQUERY
+% --------------------------------------------------
+\section{Código SQL Utilizado en BigQuery}
+
+\subsection{Código DDL (Creación de Tablas)}
+% !!! Peguen aquí su código :)
+\begin{lstlisting}
+-- Pegar aquí el código DDL de BigQuery
+CREATE TABLE ejemplo (
+    id INT64,
+    nombre STRING
+);
+\end{lstlisting}
+
+\subsection{Consultas OLAP}
+% !!! Peguen aquí sus consultas OLAP
+
+
+
+% --------------------------------------------------
+% 4. CAPTURAS DE PANTALLA
+% --------------------------------------------------
+\section{Capturas de Pantalla de la Consola de BigQuery}
+
+\subsection{Tablas Creadas}
+% !!!! Guardar la captura con el nombre "captura_tablas.png"
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.9\textwidth]{captura_tablas.png}
+    \caption{Tablas creadas en la consola de BigQuery}
+\end{figure}
+
+\subsection{Resultados de las Consultas}
+% !!!! Guardar la captura con el nombre "captura_resultados.png" :)
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.9\textwidth]{captura_resultados.png}
+    \caption{Resultados de las consultas en la consola de BigQuery}
+\end{figure}
+
+\end{document}
