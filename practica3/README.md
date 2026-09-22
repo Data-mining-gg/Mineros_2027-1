@@ -47,8 +47,7 @@ pip install -r requirements.txt
 
 ## Cuestionario
 
-**1.- Al tratarse de un tema social sensible como la violencia contra las mujeres, ¿qué consi-
-deraciones  éticas debe tener el equipo de análisis al interpretar y presentar los resultados
+**1.- Al tratarse de un tema social sensible como la violencia contra las mujeres, ¿qué consideraciones éticas debe tener el equipo de análisis al interpretar y presentar los resultados
 del EDA?**
 
 Al ser analizados los datos sobre violencia contra las mujeres en el EDA, como equipo debemos mantener las siguientes consideraciones éticas:
