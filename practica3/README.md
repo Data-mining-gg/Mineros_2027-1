@@ -51,10 +51,9 @@ pip install -r requirements.txt
 del EDA?**
 
 Al ser analizados los datos sobre violencia contra las mujeres en el EDA, como equipo debemos mantener las siguientes consideraciones éticas:
-* Evitar la revictimización y estigmatizar: Al interpretar los datos considerando los factores que forman al problema, no habrá que buscar culpables en las víctimas ni reforzar ningún tipo de estereotipo de género o prejuicios así cmo evitar generalizar.
-Por lo que es importante tomar un lenguaje adecuado y no generalizador ante este análisis.
-* Presentar datos o gráficas aisladas sin el debido contexto metodológico; ya sea omitir los factores de expansión o ignorar el diseño muestral, puede conducir a conclusiones erróneas o alarmantes que distorsionen la realidad del fenómeno social. 
-* También hay que reconocer que la violencia no afecta a todas las mujeres de la misma manera. Este análisis debe contemplar cómo interactúan variables socioeconómicas, escolaridad, edad o entidad federativa para poder entender la complejidad del problema sin caer en determinismos.
+* Evitar la revictimización y estigmatizar: Al interpretar los datos considerando los factores que forman al problema, no habrá que buscar culpables en las víctimas ni reforzar ningún tipo de estereotipo de género o prejuicios así como evitar generalizar, por lo que es importante tomar un lenguaje adecuado y no generalizador ante este análisis.
+* Presentar datos o gráficas aisladas sin el debido contexto metodológico, ya sea omitir los factores de expansión o ignorar el diseño muestral, puede conducir a conclusiones erróneas o alarmantes que distorsionen la realidad del fenómeno social. 
+* Reconocer que la violencia no afecta a todas las mujeres de la misma manera. Este análisis debe contemplar cómo interactúan variables socioeconómicas, escolaridad, edad o entidad federativa para poder entender la complejidad del problema sin caer en determinismos.
 * El procesamiento de datos debe realizarse de la mejor manera para garantizar que los resultados reflejen con fidelidad la realidad capturada por la encuesta, asegurando transparencia en las limitaciones del dataset.
 
 **2.- Se calculó la media simple de edad primer union y también la media ponderada por
