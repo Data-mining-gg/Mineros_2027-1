@@ -18,7 +18,6 @@ def detectar_porcentaje_de_nulos(df, col):
 #  + Si las columnas revisadas vienen con nulo, por otras cuestiones se le imputa un valor
 #    adecuado
 def quitar_nulos(df):
-    eliminar_col = []
     imputar_col = []
     eliminar_row_col = []
     columnas_revisadas_por_imputar = ["ingreso_pareja","num_hijos"]
@@ -26,27 +25,29 @@ def quitar_nulos(df):
         porcentaje = detectar_porcentaje_de_nulos(df,col)
         if porcentaje == 0:
             continue
+        if col == "edad_primer_union":
+            imputar_col.append(pl.col(col).fill_null(99))
+            continue
         if(col in columnas_revisadas_por_imputar):
             imputar_col.append(pl.col(col).fill_null(0))
             continue
         if porcentaje <= 3:
             eliminar_row_col.append(col)
-        elif porcentaje > 3 and porcentaje <= 60:
+        else:
             if df[col].dtype.is_numeric():
-                mediana = df[col].median()[0]
+                mediana = df[col].median()
                 imputar_col.append(pl.col(col).fill_null(mediana))
             else:
                 imputar_col.append(pl.col(col).fill_null("N/A"))
-        else:
-            eliminar_col.append(col)
-    df_limpio = (df.lazy()
-                        .drop(eliminar_col)          
-                        .drop_nulls(eliminar_row_col) 
-                        )
+    df_limpio = (df.lazy().drop_nulls(eliminar_row_col))
     if imputar_col:
         df_limpio = df_limpio.with_columns(imputar_col)
     datos_sin_nulos = df_limpio.collect()
-    return datos_sin_nulos
+    columnas_repetidas = [
+        col for col in datos_sin_nulos.columns 
+        if df[col].n_unique() == 1
+    ]
+    return datos_sin_nulos.drop(columnas_repetidas)
 
 # Normaliza las expresiones
 def normalizar(df):
@@ -54,7 +55,10 @@ def normalizar(df):
     columnas_revisadas = ["nivel_escolaridad"]
     for col in df.columns:
         if df[col].dtype.is_numeric() or col in columnas_revisadas:
-            col_final.append(df[col])
+            if df[col].dtype in [pl.Float32, pl.Float64]:
+                col_final.append(df[col].cast(pl.Int32))
+            else:
+                col_final.append(df[col])
             continue
         if df[col].dtype == pl.String:
             nulos_orig = df[col].null_count()
