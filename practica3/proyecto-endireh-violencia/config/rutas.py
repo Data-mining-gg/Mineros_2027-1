@@ -2,7 +2,6 @@ from pathlib import Path
 
 RAIZ = Path(__file__).resolve().parent.parent
 
-
 # RUTAS DE DATA
 
 RUTA_DATA_RAW = RAIZ / "data" / "data-raw"
