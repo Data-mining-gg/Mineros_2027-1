@@ -47,11 +47,11 @@ pip install -r requirements.txt
 Desde `proyecto-endireh-violencia`, para ejecutar el codigo de Preprocesamiento:
 
 ####  - Windows:
-    ```
+    ``` powershell
     python -m src.cleaning.preprocessing 
     ```
 ####  - Mac o Linux:
-    ```
+    ``` bash
     python3 -m src.cleaning.preprocessing
     ```
 
